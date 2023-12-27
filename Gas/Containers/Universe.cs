@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Gas.Containers
 {
-    internal class Leak
+    static class Universe
     {
+        public static Container GlobalContainer { get; set; }
     }
 }
