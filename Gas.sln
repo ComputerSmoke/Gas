@@ -1,0 +1,15 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 16
+VisualStudioVersion = 16.0.0.0
+MinimumVisualStudioVersion = 16.0.0.0
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gas.Windows", "Gas.Windows\Gas.Windows.csproj", "{D3A3E0A2-1EE5-45AA-BD2F-7F2A221FC418}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gas", "Gas\Gas.csproj", "{BF2B43F7-4185-4C1F-93FB-9B8FE2E0400A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gas.Linux", "Gas.Linux\Gas.Linux.csproj", "{0A75F36F-85CB-4AF2-A9D4-A49861C4A8B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gas.macOS", "Gas.macOS\Gas.macOS.csproj", "{D8A9777F-D0D3-4E60-80B5-1FFA19958607}"
+EndProject
+Global
+EndGlobal
