@@ -10,8 +10,151 @@ Hierarchy:
         - ref!! d0c1ec92-b449-4ff8-b4fe-1183d2a6f4d8
         - ref!! cc4b7b7c-f5b8-4f56-b981-6639fe4f1349
         - ref!! 2f44e759-c6e7-4c22-b7f3-11b9479e4755
-        - ref!! f6950dc6-c2b5-43b8-a54a-63c147fb1514
+        - ref!! 2c5f8b43-aa8f-46b5-950e-c964fba49fba
+        - ref!! 1db81ec8-e5ea-42d8-b4e2-26506f301de5
+        - ref!! fddf79bc-3485-4db2-bf66-7b0e50afbde6
     Parts:
+        -   Entity:
+                Id: 1db81ec8-e5ea-42d8-b4e2-26506f301de5
+                Name: Container
+                Components:
+                    2713c296851c3d7d4befcc8188a73eaa: !TransformComponent
+                        Id: a54763bf-860d-4bf7-97fa-ddb484324c00
+                        Position: {X: 0.0, Y: 1.0710399, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            ac219e7b8b81190908cdad2ece7ff45c: ref!! c79f1aa2-8023-439b-8b83-c59aee05d851
+                    0d66790042bedfbfd724d365c49d7cd6: !Gas.Containers.Container,Gas
+                        Id: bef56337-74ea-4d03-afd7-8fbc2787e141
+                        Volume: 1000.0
+                        Temperature: 293.15
+                        Order: 0
+                    804f97ae101a24642022ce9c519d0587: !ModelComponent
+                        Id: ed4a7689-530b-439e-a79f-8cb48e7dcc3e
+                        Model: 46b31793-7e57-4baf-8219-0cbea2d4c22a:Cube
+                        Materials:
+                            f3f499de4199010c51b533ce1e2a47b7~0: 832132bd-fd71-4626-bb82-d054f364625d:Glass
+                    0f2e99e21590955a4a0ed59e635543de: !ParticleSystemComponent
+                        Id: 78c380a9-d7bf-4747-bc49-4b5b6a0a7b69
+                        Control:
+                            ResetSeconds: 0.0
+                            Control: Stop
+                        Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                5c7b8b443147929af346335a68b5e1c1:
+                                    MaxParticlesOverride: 100
+                                    ParticleLifetime: {X: 1.0, Y: 1.0}
+                                    SimulationSpace: Local
+                                    ShapeBuilder: !ShapeBuilderBillboard
+                                        SamplerPosition: null
+                                        SamplerSize: null
+                                        SamplerRotation: null
+                                    Material: !ParticleMaterialComputeColor
+                                        ComputeColor: !ComputeTextureColor
+                                            Texture: 053da64a-e745-484b-8628-173d4ca541c6:dota
+                                            FallbackValue:
+                                                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                            Scale: {X: 1.0, Y: 1.0}
+                                            Offset: {X: 0.0, Y: 0.0}
+                                            Swizzle: null
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        05cbcce0e2c489972380302987fcdc2a: !SpawnerPerSecond
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 100.0
+                                    Initializers:
+                                        77cc8f3386f3a772c7747d248601bb8f: !InitialVelocitySeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            VelocityMin: {X: -1.0, Y: -1.0, Z: -1.0}
+                                            VelocityMax: {X: 1.0, Y: 1.0, Z: 1.0}
+                                        7037716c9cfa5c52710fd938fbb75c0b: !InitialPositionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            PositionMin: {X: -0.5, Y: -0.5, Z: -0.5}
+                                            PositionMax: {X: 0.5, Y: 0.5, Z: 0.5}
+                                            Interpolate: false
+                                        dcf067964db153cb69e843c93492bbd1: !InitialSizeSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 0.1
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            RandomSize: {X: 1.0, Y: 1.0}
+                                    Updaters:
+                                        bd89a528165f8b21fe468557282262c0: !UpdaterCollider
+                                            DebugDraw: true
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: true
+                                            FieldShape: !FieldShapeCube
+                                                HalfSideX: 0.5
+                                                HalfSideY: 0.5
+                                                HalfSideZ: 0.5
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: true
+                                            DisplayParticleScaleUniform: false
+                                            IsHollow: true
+                                            KillParticles: false
+                                            Restitution: 1.0
+                                            Friction: 0.1
+                    b13f9ac39fe266dbfedaf61a9ddaf845: !Gas.Containers.PressureVisualizer,Gas
+                        Id: 4450cfa4-aee2-42fc-af6e-ff64340019af
+        -   Entity:
+                Id: 2c5f8b43-aa8f-46b5-950e-c964fba49fba
+                Name: GlobalContainer
+                Components:
+                    10e7b4841f5a993db063ed1ab686fe37: !TransformComponent
+                        Id: aa5400f2-239c-4329-bb93-5a1dc7d13c11
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    af051aa69bfb449a1892bd4c823db855: !Gas.Containers.GlobalContainer,Gas
+                        Id: 203a4188-9cf2-4e4d-ab2e-add7797e6647
+                        Volume: 1000000000000.0
+                        Temperature: 293.15
+                        Order: 0
         -   Entity:
                 Id: 2f44e759-c6e7-4c22-b7f3-11b9479e4755
                 Name: Ground
@@ -68,6 +211,41 @@ Hierarchy:
                         Type: !LightSkybox
                             Skybox: f888bfbe-c028-4823-8a2c-426ea3194450:Skybox
         -   Entity:
+                Id: ccb5ec02-03a6-46ce-8ca3-08caee9cd3c1
+                Name: Leak
+                Components:
+                    8c4467dfd698185f46273d0380689c22: !TransformComponent
+                        Id: c79f1aa2-8023-439b-8b83-c59aee05d851
+                        Position: {X: 0.4986477, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    a24f3edc6fd7edf9dd8c33c2d51c397c: !Gas.Containers.Transfers.Leak,Gas
+                        Id: ac880e4b-08e4-46d4-b811-582bd647a514
+                        Area: 0.1
+                    5023ef25a0715c744dfea74b9bc131e5: !RigidbodyComponent
+                        Id: f882af11-389f-45db-8667-a953da08bd66
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        IsKinematic: true
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            19a0e2a997986f0c72f96f36917f766f: !CylinderColliderShapeDesc
+                                Height: 0.05
+                                Radius: 0.05
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.70710677, W: 0.70710677}
+        -   Entity:
                 Id: d0c1ec92-b449-4ff8-b4fe-1183d2a6f4d8
                 Name: Directional light
                 Components:
@@ -93,16 +271,15 @@ Hierarchy:
                                 BiasParameters: {}
                         Intensity: 20.0
         -   Entity:
-                Id: f6950dc6-c2b5-43b8-a54a-63c147fb1514
-                Name: Sphere
+                Id: fddf79bc-3485-4db2-bf66-7b0e50afbde6
+                Name: Pressurizer
                 Components:
-                    52ed6b053f673794fa47f964195e8a36: !TransformComponent
-                        Id: db0fda85-18cd-4cc3-a947-710148c21642
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                    e78e4da9c96ae52c6675c47825e5e5b5: !TransformComponent
+                        Id: 4035beba-9688-40a4-8156-0f6fd6da0e57
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    19982873418e3feab2f9106c72f80499: !ModelComponent
-                        Id: f02fa39c-0086-4efa-bcfa-82f348ab3032
-                        Model: d6dbacb4-81e3-454d-9596-fdc175c18fb4:Sphere
-                        Materials: {}
+                    94a3ad747664482c44bfad319ed7b24d: !Gas.Containers.Pressurizer,Gas
+                        Id: d9c80680-72e0-4f4b-9483-5b13f0bc2ba5
+                        container: ref!! bef56337-74ea-4d03-afd7-8fbc2787e141

@@ -43,7 +43,7 @@ namespace Gas.Containers.Transfers
             {
                 lock (container2)
                 {
-                    double delta = timer.ElapsedTicks / Stopwatch.Frequency;
+                    double delta = ((double)timer.ElapsedTicks) / Stopwatch.Frequency;
                     timer.Restart();
                     Exchange(container1, container2, Area, delta);
                 }
@@ -81,7 +81,9 @@ namespace Gas.Containers.Transfers
         {
             double dp = container1.Pressure - container2.Pressure;
             //Flow rate is assumed to be constant factor of hole area and square root of pressure difference.
-            double flowRate = Math.Sqrt(dp) * area * 13;
+            double flowRate = Math.Sqrt(Math.Abs(dp)) * area * 13;
+            if (dp < 0)
+                flowRate *= -1;
             double flowAmount = flowRate * delta;
             static void TransferMoles(Container source, Container dest, double amount)
             {

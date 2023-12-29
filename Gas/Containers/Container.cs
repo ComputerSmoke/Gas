@@ -11,7 +11,7 @@ using Gas.Chemistry;
 
 namespace Gas.Containers
 {
-    public class IllegalNegativeException(string msg) : Exception(msg);
+    public class IllegalValueException(string msg) : Exception(msg);
     public class Container : StartupScript
     {
         public double Volume { get; set; }
@@ -67,7 +67,7 @@ namespace Gas.Containers
         public List<(Molecule, double)> MolePortion(double n)
         {
             if (n < 0)
-                throw new IllegalNegativeException("Cannot take negative portion of gas.");
+                throw new IllegalValueException("Cannot take negative portion of gas.");
             double total = TotalMoles();
             List<(Molecule, double)> res = [];
             if (total <= n)
@@ -84,8 +84,10 @@ namespace Gas.Containers
         {
             foreach(var (mol, count) in counts)
             {
-                if(!moleCounts.ContainsKey(mol) && count < 0 || moleCounts[mol] + count < 0)
-                    throw new IllegalNegativeException("Not enough in moleCounts to remove this many molecules.");
+                if(!moleCounts.ContainsKey(mol) && count < 0 || moleCounts.ContainsKey(mol) && moleCounts[mol] + count < 0)
+                    throw new IllegalValueException("Not enough in moleCounts to remove this many molecules.");
+                if (double.IsNaN(count))
+                    throw new IllegalValueException("passed count is not a number.");
             }
             foreach(var (mol, count) in counts)
             {

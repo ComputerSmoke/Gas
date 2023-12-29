@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Markup;
 
-namespace Gas.Containers
+namespace Gas.Containers.Transfers
 {
     public class Connection : Transfer
     {

@@ -3,19 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Gas.Chemistry;
+using Stride.Engine;
 
 namespace Gas.Containers
 {
-    public class GlobalContainer : Container
+    public class Pressurizer : StartupScript
     {
-        public GlobalContainer() : base() 
-        {
-            Volume = 1e12;
-        }
+        public Container container;
         public override void Start()
         {
-            base.Start();
-            Universe.GlobalContainer = this;
+            container.Add([(MoleculeTable.Oxygen, 100)]);
         }
     }
 }
